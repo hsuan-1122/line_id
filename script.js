@@ -1,6 +1,6 @@
 document.getElementById("input").addEventListener("keydown", (event) => {
             if (event.key === "Enter") {
-                fetch("http://localhost:8000/api/message", {
+                fetch("https://api-d1an.onrender.com/api/message", {
                     method: "POST",
                     headers: {
                         "Content-Type":  "text/plain; charset=UTF-8",
