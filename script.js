@@ -9,7 +9,7 @@ document.getElementById("input").addEventListener("keydown", (event) => {
                 })
                 .then(res => res.json())
                 .then(data => {
-                    if (data.message === "Rick") {
+                    if (data.message == "Rick") {
                         window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank");
                     } else {
                         document.getElementById("result").innerText = data.message;
