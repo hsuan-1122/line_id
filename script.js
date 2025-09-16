@@ -10,7 +10,7 @@ document.getElementById("input").addEventListener("keydown", (event) => {
                 .then(res => res.json())
                 .then(data => {
                     if (data.message == "Rick") {
-                        window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ?autoplay=1";
+                        window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
                     } else {
                         document.getElementById("result").innerText = data.message;
                     }
