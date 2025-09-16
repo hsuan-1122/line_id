@@ -13,6 +13,8 @@ def message():
     chineseName = data.get(name)
     if name in data:
         return jsonify({"message": f"{name}的中文名字是: {chineseName}"})
+    elif name == "Rick":
+        return jsonify({"message": "Rick"})
     else:
         return jsonify({"message": f"資料庫裡沒有{name}的中文名字"})
 

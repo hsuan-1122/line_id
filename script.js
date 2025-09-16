@@ -9,7 +9,11 @@ document.getElementById("input").addEventListener("keydown", (event) => {
                 })
                 .then(res => res.json())
                 .then(data => {
-                    document.getElementById("result").innerText = data.message;
+                    if (data.message === "Rick") {
+                        window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank");
+                    } else {
+                        document.getElementById("result").innerText = data.message;
+                    }
                 })
                 .catch(err => {
                     document.getElementById("result").innerText = "錯誤：" + err;
