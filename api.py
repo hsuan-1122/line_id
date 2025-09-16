@@ -5,7 +5,7 @@ import json
 api = Flask(__name__)
 CORS(api)
 
-@app.route("/api/message", methods=["POST"])
+@api.route("/api/message", methods=["POST"])
 def message():
     name = request.data.decode("utf-8")
     with open('data.json', 'r', encoding='utf-8') as f:
