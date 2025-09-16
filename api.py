@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import json
+import os
 
 api = Flask(__name__)
 CORS(api)
@@ -19,5 +20,5 @@ def message():
         return jsonify({"message": f"資料庫裡沒有{name}的中文名字"})
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 8000))  # 本機沒設 PORT 時預設 8000
+    port = int(os.environ.get("PORT", 8000))  
     api.run(host="0.0.0.0", port=port, debug=True)
